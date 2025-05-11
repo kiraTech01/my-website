@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>آلة حاسبة</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            direction: rtl;
+        }
+        #calculator {
+            background-color: white;
+            padding: 20px;
+            margin: 50px auto;
+            width: 300px;
+            box-shadow: 0 0 10px #aaa;
+            border-radius: 10px;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .buttons button {
+            width: 60px;
+            height: 60px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #history {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: right;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        #datetime {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div id="datetime"></div>
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="addToDisplay('7')">٧</button>
+            <button onclick="addToDisplay('8')">٨</button>
+            <button onclick="addToDisplay('9')">٩</button>
+            <button onclick="addToDisplay('/')">÷</button><br>
+            <button onclick="addToDisplay('4')">٤</button>
+            <button onclick="addToDisplay('5')">٥</button>
+            <button onclick="addToDisplay('6')">٦</button>
+            <button onclick="addToDisplay('*')">×</button><br>
+            <button onclick="addToDisplay('1')">١</button>
+            <button onclick="addToDisplay('2')">٢</button>
+            <button onclick="addToDisplay('3')">٣</button>
+            <button onclick="addToDisplay('-')">−</button><br>
+            <button onclick="addToDisplay('0')">٠</button>
+            <button onclick="addToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="addToDisplay('+')">+</button><br>
+            <button onclick="clearDisplay()">مسح</button>
+        </div>
+        <div id="history"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
